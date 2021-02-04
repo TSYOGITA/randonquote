@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-color: aquamarine;
+      }
+      #author {
+        background-color: white;
+        font-size: 50px;
+        color: seagreen;
+        font-weight: bolder;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        position: relative;
+        top: 50px;
+        right: 40px;
+        left: 40px;
+        bottom: 50px;
+        height: 500px;
+        width: 900px;
+      }
+      button:hover {
+        background-color: yellowgreen;
+        color: red;
+      }
+      button {
+        position: fixed;
+        right: 700px;
+        top: 400px;
+      }
+    </style>
+  </head>
+  <body id="quote-box">
+    <div id="author">
+      <div id="text"></div>
+      <br />
+      <br />
+      <br />
+      <button onclick="newQuote()">NEW QUOTE</button>
+    </div>
+  </body>
+  <script>
+    var quotes = [
+      "BE GOOD",
+      "BE FAITHFULL",
+      "DO GOOD THINGS",
+      "DONT DISTURB ANYONE",
+      "ALWAYS HELP PEOPLE IN NEED",
+      "RESPECT YOUR ELDERS",
+      "ALWAYS BE LOYAL",
+      "NEVER LOOSE HOPE",
+      "FAILURE IS THE STEPPING STONE TO SUCCESS",
+      "WORK HARD SYILL YOU SUCCEED",
+    ];
+
+    function newQuote() {
+      var randomNumber = Math.floor(Math.random() * quotes.length);
+      document.getElementById("text").innerHTML = quotes[randomNumber];
+    }
+  </script>
+</html>
